@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="atmconsultoria.studio.com.atmempresaconsultoria.EmpresaActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/detalhe_empresa" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/empresa_detalhes"
+        android:id="@+id/textView"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_toRightOf="@+id/imageView2"
+        android:layout_toEndOf="@+id/imageView2"
+        android:layout_marginBottom="24dp" />
+
+    <ScrollView
+        android:layout_width="320dp"
+        android:layout_height="400dp"
+        android:id="@+id/scrollView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text=" A gente não sabemos escolher presidente A gente não sabemos tomar conta da gente A gente não sabemos nem escovar os dentes Tem gringo pensando que nóis é indigente  Inútil A gente somos inútil A gente faz carro e não sabe guiar A gente faz trilho e não tem trem pra botar A gente faz filho e não consegue criar A gente pede grana e não consegue pagar  Inútil A gente somos inútil  A gente faz música e não consegue gravar A gente escreve livro e não consegue publicar A gente escreve peça e não consegue encenar A gente joga bola e não consegue ganhar  Inútil A gente somos inútil [...]                            MOREIRA, Roger. Inútil. Intérprete: Ultraje a Rigor. Nós vamos invadir sua praia.                                                                                                                                                           1)    Que ideia essa letra transmite a você? Resposta pessoal. Professor, espera-se que o aluno compreenda o sentido crítico e irônico do texto ao se referir aos problemas que geram dia após dia frustações, sensação de impotência e de inutilidade, embora se esteja sempre em movimento, fazendo alguma coisa.      2)     A quem se refere a canção? Aos brasileiros comuns.    3)      Identifique, na letra da canção, uma oração que foge ao registro convencional da língua e comente sobre sua construção. A oração é: “A gente somos inútil”. Professor, a concordância “a gente somos”, embora possa ser considerada gramaticalmente correta, é condenada por alguns especialistas. O predicativo “inútil” concorda com o sujeito mas não com o verbo, o que enfatiza que se trata de uma construção que foge às convenções da língua.    4)     Em sua opinião, qual pode ter sido o propósito do compositor ao utilizar esse tipo de concordância verbal na letra? Chamar a atenção do interlocutor para a realidade daqueles que costumam usar esse tipo de concordância, ou seja, pessoas que tem menos acesso à educação ou às normas prestigiadas da língua. Pode também representar deboche em relação a quem usa as normas de prestigio, geralmente os que têm mais reconhecimento social.  5) A letra da música está correta, gramaticalmente falando? Explique.        NÃO. Ela está escrita na linguagem do dia-a-dia, sem nenhuma formalidade, visando a linguagem como comunicação e se o emissor passa a mensagem e o receptor a compreende, significa que houve comunicação.  6) Quais seriam as razões para a letra possuir tais “alterações”?         Na época que foi feita a música estava acontecendo a Ditadura Militar, que você não tinha liberdade de expressão, censura. Os erros de português foram propositais de concordância, queria que a ditadura entendesse que “nós” somos tão “burros” que não sabemos nem escovar os dentes, por exemplo. Precisamos de alguém cuidando da gente. Mas não era isso, eles queriam mostrar que eles não deixam a gente escolher presidente.  7) Quais problemas enfrentados no Brasil são denunciados na letra? Explique.       Não sabemos votar /       Não fazemos planejamento familiar / financeiro       Não conhecemos nossos direitos.       O povo brasileiro mostra-se omisso e desinteressado pelo que acontece no país, não se vê o povo lutando contra reformas que apenas privilegiam poderosos, tanto políticos quanto empresários.  8) Escreva alguns desvios da norma culta, cometidos pelos falantes da língua portuguesa, no dia-a-dia.       Nóis. A gente não sabemos, A gente somos, prá.  9) Reflita sobre os versos: “A gente não sabemos / Escolher presidente / A gente não sabemos / Tomar conta da gente”. Qual a relação desses versos com a Ditadura Militar? Para ajudar a responder, leia este texto sobre as “Diretas Já”.        A Ditadura Militar no Brasil durou 21 anos (1964-1985) onde uma junta militar escolhia o novo presidente. Somente no ano 1989, ou seja, 29 anos depois da escolha do último presidente (3//10/60), é que podemos eleger novamente um presidente, graças ao movimento (Diretas Já) de cunho popular que teve como objetivo a retomada das eleições diretas ao cargo de presidente da República começou em maio / 1983 e foi até 1984, tendo mobilizado milhões de pessoas em comícios e passeatas."
+            android:id="@+id/textView2" />
+    </ScrollView>
+
+</RelativeLayout>
