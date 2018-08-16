@@ -7,28 +7,39 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="br.com.whatsappandroid.cursoandroid.whatsapp.activity.LoginActivity"
+    tools:context="br.com.whatsappandroid.cursoandroid.whatsapp.activity.CadastroUsuarioActivity"
     android:background="@color/colorPrimary"
     android:gravity="center_vertical|center_horizontal">
 
     <ImageView
-        android:layout_width="@dimen/largura_logo"
-        android:layout_height="@dimen/altura_logo"
-        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="113dp"
+        android:id="@+id/imageView2"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/logo" />
+        android:background="@drawable/usuario" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editCadastroNome"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp"
+        android:hint="Digite seu nome" />
 
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/edit_login_email"
-        android:layout_below="@+id/imageView"
+        android:id="@+id/editCadastroEmail"
+        android:layout_below="@+id/editCadastroNome"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="38dp"
         android:hint="Digite seu email" />
 
     <EditText
@@ -36,32 +47,19 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/edit_login_senha"
-        android:layout_below="@+id/edit_login_email"
+        android:id="@+id/editCadastroSenha"
+        android:layout_below="@+id/editCadastroEmail"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="42dp"
-        android:hint="Digite sua Senha" />
+        android:hint="Digite sua senha" />
 
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/botao_logar"
-        android:id="@+id/bt_logar"
-        android:layout_below="@+id/edit_login_senha"
+        android:text="@string/botao_cadastrar"
+        android:id="@+id/bt_cadastrar"
+        android:layout_below="@+id/editCadastroSenha"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="39dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/texto_cadastre"
-        android:id="@+id/textView"
-        android:layout_below="@+id/bt_logar"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/textColorPrimary"
-        android:onClick="abrirCadastroUsuario" />
-
+        android:layout_marginTop="38dp" />
 </RelativeLayout>
