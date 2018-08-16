@@ -15,7 +15,9 @@ import java.util.HashMap;
 import java.util.Random;
 import java.util.StringTokenizer;
 
+import br.com.whatsappandroid.cursoandroid.whatsapp.Manifest;
 import br.com.whatsappandroid.cursoandroid.whatsapp.R;
+import br.com.whatsappandroid.cursoandroid.whatsapp.helper.Permissao;
 import br.com.whatsappandroid.cursoandroid.whatsapp.helper.Preferencias;
 
 public class LoginActivity extends AppCompatActivity {
@@ -25,11 +27,17 @@ public class LoginActivity extends AppCompatActivity {
     private EditText codArea;
     private EditText codPais;
     private Button cadastrar;
+    private String[] permissoesNecessarias = new String[]{
+            android.Manifest.permission.SEND_SMS,
+            android.Manifest.permission.INTERNET
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        Permissao.validaPermissoes(1,this,permissoesNecessarias);
 
         nome = (EditText) findViewById(R.id.edit_nome);
         telefone = (EditText) findViewById(R.id.edit_telefone);
