@@ -1,5 +1,8 @@
 package br.com.whatsappandroid.cursoandroid.whatsapp.activity;
 
+import android.content.DialogInterface;
+import android.content.pm.PackageManager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.SmsManager;
@@ -72,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
                 Random randomico = new Random();
                 int numeroRandomico = randomico.nextInt(9999 - 1000) + 1000;
                 String token = String.valueOf(numeroRandomico);
-                String mensagemEnvio = "WhatsApp Código de Confirmação" + token;
+                String mensagemEnvio = "Olá Thuani Gravidez! NarizApp Código de Confirmação " + token;
 
                 //salvar os dados para validação
                 Preferencias preferencias = new Preferencias(LoginActivity.this);
@@ -100,5 +103,29 @@ public class LoginActivity extends AppCompatActivity {
             return false;
         }
 
+    }
+
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults){
+        super.onRequestPermissionsResult(requestCode,permissions,grantResults);
+        for(int resultado : grantResults){
+            if(resultado == PackageManager.PERMISSION_DENIED){
+                alertaValidacaoPermissao();
+            }
+        }
+    }
+
+    private void alertaValidacaoPermissao(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Permissões Negadas");
+        builder.setMessage("Para utilizar esse app é necessário aceitar as permissões!");
+        builder.setPositiveButton("CONFIRMAR", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }
