@@ -17,6 +17,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        referenciaFirebase.child("THUANI").setValue("GRAVIDEZ");
+        referenciaFirebase.child("pontos").setValue("400");
     }
 }
